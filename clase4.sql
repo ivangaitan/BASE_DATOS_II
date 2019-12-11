@@ -1,6 +1,6 @@
 USE sakila;
 1-
-SELECT title, special_features FROM film;
+SELECT title, special_features FROM film WHERE rating = 'PG-13';
 2-
 SELECT DISTINCT length FROM film ORDER BY length;
 3- 
