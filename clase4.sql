@@ -8,7 +8,7 @@ SELECT title, rental_rate, replacement_cost FROM filM WHERE replacement_cost BET
 4- 
 SELECT title, rating, special_features FROM film WHERE special_features LIKE '%Behind the Scenes%';
 5-
-SELECT a.first_name, a.last_name FROM film AS f INNER JOIN film_actor AS fa INNER JOIN actor AS a ON f.film_id = fa.film_id AND a.actor_id = fa.actor_id WHERE f.title LIKE 'ZOOLANDER FICTION';
+SELECT first_name, last_name from film, film_actor, actor WHERE film.film_id = film_actor.film_id and film_actor.actor_id = actor.actor_id and film.title like 'ZOOLANDER FICTION';
 6-
 SELECT ADDRESS, country, city, store_id FROM store s, ADDRESS a, country co, city ci WHERE a.address_id = s.address_id AND a.city_id = ci.city_id AND ci.country_id = co.country_id AND s.store_id = 1;
 7-
